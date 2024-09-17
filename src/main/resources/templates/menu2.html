@@ -1,0 +1,74 @@
+<div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
+    <a href="/home/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        <img src="https://firebasestorage.googleapis.com/v0/b/kyte-7c484.appspot.com/o/FIARXDcUSOXGCb%2Fthumb_280_Ju2DGFxT09muQnPCJx7O1w%3D%3D.jpg?alt=media&token=b666e5a6-cf9e-44ea-86c5-b68116081b2b" alt="" width="50" height="50" class="rounded-cube me-2">
+        <span class="fs-4"><strong>ZTEC</strong></span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+            <a th:href="@{/home/}" class="nav-link active">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+                Home
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/venta/}" class="nav-link text-white">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+                Ventas
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/cliente/}" class="nav-link text-white">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
+                Clientes
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/proveedor/}" class="nav-link text-white">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
+                Proveedores
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/usuario/}" class="nav-link text-white">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
+                Usuarios
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/mediopago/}" class="nav-link text-white">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+                Medios de pago
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/tipocomprobante/}" class="nav-link text-white">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+                Tipos de Comprobante
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/compra/}" class="nav-link text-white">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+                Compras
+            </a>
+        </li>
+    </ul>
+    <hr>
+    <div class="dropdown">
+        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://firebasestorage.googleapis.com/v0/b/kyte-7c484.appspot.com/o/FIARXDcUSOXGCb%2Fthumb_280_Ju2DGFxT09muQnPCJx7O1w%3D%3D.jpg?alt=media&token=b666e5a6-cf9e-44ea-86c5-b68116081b2b" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong>Admin</strong>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+            <!--<li><a class="dropdown-item" href="#">New project...</a></li>-->
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <!--<li><a class="dropdown-item" href="#">Profile</a></li>-->
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" th:href="@{/logout}">Sign out</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="b-example-divider b-example-vr"></div>
+
