@@ -1,62 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
-        <title>LOGIN</title>
+        <title>Login</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
         <style>
-        body {
-            background-image: url("https://s1.1zoom.me/big0/991/326852-alexfas01.jpg");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            
-        }
+            body {
+                background-image: url("https://s1.1zoom.me/big0/991/326852-alexfas01.jpg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 100vh;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
 
-        .card {
-            background-color: rgba(255, 255, 255, 0.9); /* Fondo del formulario */
-        }
-    </style>
+            .card {
+                background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco translúcido */
+                border-radius: 15px;
+                padding: 40px 30px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .alert-primary {
+                background-color: #0062cc; /* Manteniendo el color azul original */
+                color: white;
+                font-size: 24px;
+                text-align: center;
+                padding: 20px;
+                border-radius: 10px;
+                margin-bottom: 30px;
+            }
+
+            .form-label {
+                font-size: 14px;
+                font-weight: 600;
+                color: #333;
+            }
+
+            .form-control {
+                border-radius: 30px;
+                padding: 12px 20px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                margin-bottom: 20px;
+                transition: border-color 0.3s ease;
+            }
+
+            .form-control:focus {
+                border-color: #0062cc;
+                box-shadow: 0 0 5px rgba(0, 98, 204, 0.5);
+            }
+
+            .btn-primary {
+                width: 100%;
+                padding: 12px;
+                font-size: 16px;
+                border-radius: 30px;
+                background-color: #0062cc;
+                color: white;
+                border: none;
+                transition: background-color 0.3s ease;
+            }
+
+            .btn-primary:hover {
+                background-color: #004085;
+            }
+
+            .card img {
+                display: block;
+                margin: 0 auto 20px;
+                border-radius: 50%;
+            }
+        </style>
     </head>
     <body>
-        <div class="container">
-            <div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
-                <div class="card col-sm-5">
-                    <div class="alert alert-primary alert-lg text-center">
-                        <h1>Login</h1>
-                    </div>
-                    <br>
-                    <div class="text-center">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/kyte-7c484.appspot.com/o/FIARXDcUSOXGCb%2Fthumb_280_Ju2DGFxT09muQnPCJx7O1w%3D%3D.jpg?alt=media&token=b666e5a6-cf9e-44ea-86c5-b68116081b2b" alt="" width="120" height="120" class="rounded me-2 mx-auto">
-                    </div>
-                    <br>
-                    <!--<form action="/login/buscar" method="post" class="row g-3">-->
-                        <div class="row">
-                            <div class="col-md-6 mx-auto">
-                                <label class="form-label">Usuario</label>
-                                <input type="text" class="form-control" name="user" placeholder="USUARIO">
-                            </div>
-                        </div>
-                        <div class="my-4"></div>
-                        <div class="row">
-                            <div class="col-md-6 mx-auto">
-                                <label class="form-label">Password</label>
-                                <input type="password" class="form-control" name="pass" placeholder="***********">
-                            </div>
-                        </div>
-                        <div class="my-4">
-                            <div class="row">
-                                <div class="col-12 text-center">
-                                    <button type="submit" class="btn btn-primary">Ingresar</button>
-                                </div>
-                            </div>
-                        </div>
-                    <!--</form>-->
-
+        <div class="container d-flex justify-content-center align-items-center">
+            <div class="card">
+                <div class="alert-primary">
+                    <h2>Bienvenido</h2>
+                    <p>Inicia sesión para continuar</p>
                 </div>
+                <div class="text-center">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/kyte-7c484.appspot.com/o/FIARXDcUSOXGCb%2Fthumb_280_Ju2DGFxT09muQnPCJx7O1w%3D%3D.jpg?alt=media&token=b666e5a6-cf9e-44ea-86c5-b68116081b2b" alt="Logo" width="100" height="100">
+                </div>
+                <form action="/tu-ruta-de-login" method="POST">
+                    <div class="mb-3">
+                        <label class="form-label">Usuario</label>
+                        <input type="text" class="form-control" name="user" placeholder="Ingresa tu usuario" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" name="pass" placeholder="**********" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Ingresar</button>
+                </form>
             </div>
         </div>
     </body>
 </html>
+
