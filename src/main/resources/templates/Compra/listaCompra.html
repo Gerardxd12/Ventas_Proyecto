@@ -3,160 +3,242 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
+        <meta name="description" content="Compra carrito">
         <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-        <meta name="generator" content="Hugo 0.118.2">
+        <title>Nueva Compra</title>
 
-        <title>Lista de Compras</title>
-
-        <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sidebars/">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-        <!-- Custom styles for this template -->
-        <link href="../sidebars.css" rel="stylesheet">
+        <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-        <link href="../menu.css" rel="stylesheet">
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-        <script src="../sidebars.js"></script>
-        <script src="../assets/js/color-modes.js"></script>
-        <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+        
         <style>
-            .container {
-                background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for the content container */
-                border-radius: 10px; /* Rounded corners for the container */
-                padding: 20px; /* Padding inside the container */
-                box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle lift effect */
-                margin-top: 0px; /* Margin at the top to separate from the header */
+            /* Global Styles */
+            body {
+                font-family: 'Arial', sans-serif;
+                background-image: url('https://static.vecteezy.com/system/resources/previews/006/697/637/non_2x/24-hours-online-shopping-storeon-computer-and-smartphone-with-cloud-computing-and-wireless-technology-in-futuristic-background-vector.jpg');
+                background-size: cover; /* Ensure the image covers the entire background */
+                background-position: center center; /* Center the image */
+                background-attachment: fixed; /* Make the background image fixed during scrolling */
+                padding-top: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                color: white; /* Make text white for better visibility */
             }
-            .table {
-                background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for the table */
-                border-radius: 10px; /* Rounded corners for the table */
-                margin-top: 20px; /* Margin at the top to separate from the form */
-            }
-        </style>
 
+            /* Container Styles */
+            .container {
+                background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+                border-radius: 15px;
+                padding: 30px 40px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                max-width: 1200px;
+                width: 100%;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .container:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            }
+
+            h4 {
+                color: #2d3e50;
+                font-size: 1.8rem;
+                text-align: center;
+                margin-bottom: 40px;
+                font-weight: 600;
+            }
+
+            /* Table Styles */
+            .table {
+                background-color: #f9fafb;
+                border-radius: 12px;
+                margin-top: 20px;
+            }
+
+            .table thead {
+                background-color: #007bff;
+                color: white;
+            }
+
+            .table th, .table td {
+                padding: 18px;
+                text-align: center;
+                font-size: 1.1rem;
+                border: 1px solid #ddd;
+            }
+
+            .table tbody tr:hover {
+                background-color: #f1f1f1;
+                cursor: pointer;
+            }
+
+            /* Form Styles */
+            .form-label {
+                font-weight: 600;
+                color: #495057;
+            }
+
+            input, select {
+                border-radius: 8px;
+                border: 1px solid #ced4da;
+                padding: 12px;
+                font-size: 1rem;
+                transition: border 0.3s ease;
+            }
+
+            .form-control:focus {
+                border-color: #007bff;
+                box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+            }
+
+            /* Button Styles */
+            .btn {
+                border-radius: 12px;
+                font-size: 1.2rem;
+                padding: 12px 24px;
+                transition: background-color 0.3s ease, transform 0.2s ease;
+            }
+
+            .btn-success {
+                background-color: #28a745;
+                border: none;
+            }
+
+            .btn-success:hover {
+                background-color: #218838;
+                transform: scale(1.05);
+            }
+
+            .btn-primary {
+                background-color: #007bff;
+                border: none;
+            }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+                transform: scale(1.05);
+            }
+
+            /* Red icons on hover */
+            .text-danger:hover {
+                color: #ff4757;
+            }
+
+            /* Responsive Styles */
+            @media (max-width: 768px) {
+                .container {
+                    padding: 20px;
+                    width: 100%;
+                }
+
+                h4 {
+                    font-size: 1.5rem;
+                }
+
+                .btn {
+                    font-size: 1rem;
+                    padding: 10px 20px;
+                }
+            }
+
+        </style>
     </head>
     <body>
 
-        <div th:replace="tema_icono :: svg"></div>    
+        <div class="container">
 
-        <div th:replace="tema :: div"></div>
+            <h4 class="display-6 mb-4">CARRITO COMPRA</h4>
 
-        <div th:replace="iconos :: svg"></div>
-
-        <main class="d-flex flex-nowrap">
-            <h1 class="visually-hidden">Sidebars examples</h1>
-
-            <div th:replace="menu :: div"></div>
-
-            <!-- Aqui tendria que ir mi información (Lista, Nuevo, Editar -->
-            <div class="container">
-
-                <h4 class="display-7 mb-4">LISTA DE COMPRAS</h4>
-                <!--<div class="d-flex gap-2" style="max-width: 400px;">
-                    <a th:href="@{/compra/Ascendente}" class="btn btn-primary d-inline"><i class="bi bi-sort-up"></i> Ascendente</a>
-                    <a th:href="@{/compra/Descendente}" class="btn btn-primary d-inline"><i class="bi bi-sort-down"></i> Descendente</a>
-                </div>-->
-
-                <form action="/compra/buscar" method="post">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="desc" placeholder="Ingrese descripción">
-                        <button class="btn btn-outline-secondary" type="submit" >Buscar</button>
-                    </div>
-                </form>
-
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Código</th>
-                            <th scope="col">Fecha</th>
-                            <th scope="col">Proveedor</th>
-                            <th scope="col">Medio Pago</th>
-                            <th scope="col">Tipo Comprobante</th>
-                            <th scope="col">Usuario</th>
-                            <th scope="col">Total Soles</th>
-                            <th scope="col">Total Cantidad</th>
-                            <th scope="col">Detalle</th>
-                            <!--<th scope="col">Anular</th>-->
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr th:each="compra,x : ${compras}">
-                            <td th:text="${x.count}"></td>
-                            <td th:text="${compra.id}"></td>
-                            <td th:text="${compra.fecha}"></td>
-                            <td th:text="${compra.nombre_proveedor}"></td>
-                            <td th:text="${compra.mediopago}"></td>
-                            <td th:text="${compra.tipocomprobante}"></td>
-                            <td th:text="${compra.nom_usuario+' '+compra.ape_usuario}"></td>
-                            <td th:text="${compra.soles}"></td>
-                            <td th:text="${compra.cantidad}"></td>
-                            <td>
-                                <a  class="btn" data-bs-toggle="modal" data-bs-target="#ModalCompra" th:data-compra-id="${compra.id}"><i class="bi bi-eye"></i></a>
-
-                                <div class="modal fade" id="ModalCompra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
-                                    <div class="modal-dialog modal-lg">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Detalle de Compra</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <!-- Contenedor para cargar el contenido de la página -->
-                                                <div id="contenidoPagina"></div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                                
-
-                            </td>
-                            <!--<td>
-                                <a th:href="@{/compra/anular(cod=${compra.id})}" target="_self" style="color:red;">    
-                                    <i class="bi bi-x-circle-fill"></i>
-                                </a>
-                            </td>-->
-
-                        </tr>
-
-                    </tbody>
-                </table>
-
-                <div class="d-grid gap-2">
-                    <a th:href="@{/compra/nuevo}" class="btn btn-primary" >Agregar</a>
+            <form action="/compra/agregar" method="post" class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">Productos</label>
+                    <select name="producto_id" class="form-control" required="required">
+                        <option value="" selected="selected" disabled="disabled">Seleccione</option>
+                        <option th:each="producto : ${productos}" th:value="${producto.id}" th:text="${producto.nombre+' S/'+producto.precioc}"></option>
+                    </select>
                 </div>
 
+                <div class="col-md-6">
+                    <label class="form-label">Cantidad</label>
+                    <input type="number" class="form-control" name="cant" min="1" step="0.1" placeholder="Cantidad" required="required" value="1">
+                </div>
 
+                <div class="col-12">
+                    <button type="submit" class="btn btn-success w-100">Agregar al Carrito</button>
+                </div>
+            </form>
 
-            </div>  
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Código</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Quitar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="car,x : ${carrito}">
+                        <th th:text="${x.count}" scope="row"></th>
+                        <td th:text="${car.id}"></td>
+                        <td th:text="${car.producto}"></td>
+                        <td th:text="${car.precio}"></td>
+                        <td th:text="${car.cantidad}"></td>
+                        <td th:text="${car.total}"></td>
+                        <td>
+                            <a th:href="@{/compra/quitar(cod=${x.count})}" class="text-danger">
+                                <i class="bi bi-x-circle-fill"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
 
-        </main>
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script> $('#ModalCompra').on('show.bs.modal', function (event) {
-                // URL de la página que deseas cargar
-                var compraId = $(event.relatedTarget).data('compra-id');
-                var paginaURL = 'http://localhost:86/compra/cdetalle/' + compraId;
+            <form action="/compra/registrar" method="post" class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">Proveedor</label>
+                    <select name="proveedor_id" class="form-control" required="required">
+                        <option value="" selected="selected" disabled="disabled">Seleccione</option>
+                        <option th:each="proveedor : ${proveedores}" th:value="${proveedor.id}" th:text="${proveedor.nombre}"></option>
+                    </select>
+                </div>
 
-                // Utiliza AJAX para cargar el contenido de la página en el modal
-                $.ajax({
-                    url: paginaURL,
-                    type: 'GET',
-                    success: function (data) {
-                        // Inserta el contenido en el contenedor del modal
-                        $('#contenidoPagina').html(data);
-                    },
-                    error: function () {
+                <div class="col-md-6">
+                    <label class="form-label">Tipo Comprobante</label>
+                    <select name="tipocomprobante_id" class="form-control" required="required">
+                        <option value="" selected="selected" disabled="disabled">Seleccione</option>
+                        <option th:each="tipocomprobante : ${tipocomprobantes}" th:value="${tipocomprobante.id}" th:text="${tipocomprobante.nombre}"></option>
+                    </select>
+                </div>
 
-                        $('#contenidoPagina').html('<p>Error al cargar la página</p>' + compraId);
-                    }
-                });
-            });</script>
+                <div class="col-md-6">
+                    <label class="form-label">Medio Pago</label>
+                    <select name="mediopago_id" class="form-control" required="required">
+                        <option value="" selected="selected" disabled="disabled">Seleccione</option>
+                        <option th:each="mediopago : ${mediopagos}" th:value="${mediopago.id}" th:text="${mediopago.nombre}"></option>
+                    </select>
+                </div>
 
+                <div class="col-md-6">
+                    <label class="form-label">Fecha</label>
+                    <input type="datetime-local" class="form-control" name="fec" required="required">
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary w-100">Registrar Compra</button>
+                </div>
+            </form>
+
+        </div>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     </body>
 </html>
